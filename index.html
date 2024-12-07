@@ -73,13 +73,19 @@
     }
 
     .photos img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    }
+    border-radius: 50%;
+    width: 150px;  /* Define o tamanho das imagens */
+    height: 150px; /* Define o tamanho das imagens */
+    object-fit: cover; /* Garante que a imagem não seja distorcida */
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s; /* Efeito suave de transformação */
+}
+
+  .photos img:hover {
+    transform: scale(1.1);  /* Efeito de zoom ao passar o mouse */
+}
+
 
     .footer {
       font-size: 1.2em;
@@ -115,31 +121,59 @@
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5em;
-      }
+  h1 {
+    font-size: 2.5em;
+  }
 
-      .heart {
-        font-size: 80px;
-      }
+  .heart {
+    font-size: 80px;
+  }
 
-      .message {
-        font-size: 1.2em;
-      }
+  .message {
+    font-size: 1.2em;
+  }
 
-      .countdown {
-        font-size: 2em;
-      }
+  .countdown {
+    font-size: 2em;
+  }
 
-      .photos img {
-        width: 120px;
-        height: 120px;
-      }
+  .photos img {
+    width: 120px;  /* Ajusta o tamanho das imagens em telas menores */
+    height: 120px;
+  }
 
-      .footer {
-        font-size: 1em;
-      }
+  .footer {
+    font-size: 1em;
+  }
+}
+
+  @media (max-width: 480px) {
+    h1 {
+    font-size: 2em;
     }
+
+    .heart {
+      font-size: 70px;
+    }
+
+    .message {
+      font-size: 1.1em;
+    }
+
+    .countdown {
+      font-size: 1.8em;
+    }
+
+    .photos img {
+      width: 100px;  /* Ajusta ainda mais o tamanho das imagens em telas muito pequenas */
+      height: 100px;
+    }
+
+    .footer {
+      font-size: 0.9em;
+    }
+  }
+
 
     @media (max-width: 480px) {
       h1 {
